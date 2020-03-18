@@ -3,12 +3,12 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--blue);
+  background-color: var(--white);
 }
 
 .container {
   width: 1500px;
   padding: 30px 0 0 30px;
-  background-color: var(--white);
   max-width: calc(100% - 30px);
 }
 
