@@ -10,8 +10,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <div class="cover"></div>
   <div class="navbar sm">
-    <div class="hamburger action">
+    <div class="hamburger action" onclick="toggleNav()">
       <img src="./assets/icons/menu.svg" alt="Hamburger icon">
     </div>
     <div class="actions">
@@ -26,10 +27,34 @@
       </div>
     </div>
   </div>
-  <div class="sidebar">
-  
+  <div class="sidebar sm-hidden">
+    <p>Cl<b>Mac</b></p>
+    <ul>
+      <li>
+        <img src="./assets/icons/dashboard.svg" alt="Dashboard icon">
+      </li>
+      <li>
+        <img src="./assets/icons/monitor.svg" alt="Monitor icon">
+      </li>
+      <li>
+        <img src="./assets/icons/folder.svg" alt="Folder icon">
+      </li>
+      <li>
+        <img src="./assets/icons/settings.svg" alt="Settings icon">
+      </li>
+      <li>
+        <img src="./assets/icons/lock.svg" alt="Padlock icon">
+      </li>
+      <li>
+        <img src="./assets/icons/email.svg" alt="Message icon">
+      </li>
+    </ul>
+    <div>
+      <img src="./assets/icons/logout.svg" alt="Logout icon">
+    </div>
   </div>
   <div class="container">
   </div>
+  <script src="./scripts/sidebar.js"></script>
 </body>
 </html>
