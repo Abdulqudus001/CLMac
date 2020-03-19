@@ -14,27 +14,6 @@ cover.addEventListener('click', () => {
 
 let imageSrc = ''
 
-icons.addEventListener('mouseover', e => {
-  // console.log(e.target.nodeName);
-  if (e.target.nodeName == 'A') {
-    const { src } = e.target.childNodes[1];
-    imageSrc = src;
-    e.target.childNodes[1].setAttribute('src', `./assets/icons/dark/${getDarkImage(src)}.svg`);
-  } else if (e.target.nodeName == 'IMG') {
-    const { src } = e.target;
-    imageSrc = src;
-    e.target.setAttribute('src', `./assets/icons/dark/${getDarkImage(src)}.svg`);
-  }
-});
-
-icons.addEventListener('mouseout', e => {
-  if (e.target.nodeName == 'A') {
-    e.target.childNodes[1].setAttribute('src', imageSrc);
-  } else if (e.target.nodeName == 'IMG') {
-    e.target.setAttribute('src', imageSrc);
-  }
-});
-
 const getDarkImage = path => {
   const fileName = path.split('/')[path.split('/').length - 1];
   return getDarkImageName(fileName);
@@ -44,3 +23,46 @@ const getDarkImageName = name => {
   const fileName = name.split('.')[0];
   return `${fileName}-dark`;
 }
+
+const removeClicked = () => {
+  [...icons.children].forEach(el => {
+    el.childNodes[3].classList.remove('hovered');
+    const img = el.childNodes[1].childNodes[1];
+    if (img.src.toString().includes('dark')) {
+      img.src = imageSrc;
+      imageSrc = '';
+    }
+  })
+}
+
+const addClickToFirst = (() => {
+  const el = [...icons.children][0];
+  console.log(el);
+  el.childNodes[3].classList.add('hovered');
+  const img = el.childNodes[1].childNodes[1];
+  imageSrc = img.src;
+  img.src = `./assets/icons/dark/${getDarkImage(imageSrc)}.svg`;
+})()
+
+const handleClick = (e) => {
+  removeClicked();
+
+  if (e.target.nodeName == 'A') {
+    const { src } = e.target.childNodes[1];
+    imageSrc = src;
+    e.target.childNodes[1].setAttribute('src', `./assets/icons/dark/${getDarkImage(src)}.svg`);
+
+    const div = e.target.nextElementSibling;
+    div.classList.toggle('hovered');
+  } else if (e.target.nodeName == 'IMG') {
+    const { src } = e.target;
+
+    imageSrc = src;
+    e.target.setAttribute('src', `./assets/icons/dark/${getDarkImage(src)}.svg`);
+
+    const div = e.target.parentNode.nextElementSibling
+    div.classList.toggle('hovered');
+  }
+}
+
+icons.addEventListener('click', handleClick);
