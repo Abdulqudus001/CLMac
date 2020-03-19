@@ -37,7 +37,6 @@ const removeClicked = () => {
 
 const addClickToFirst = (() => {
   const el = [...icons.children][0];
-  console.log(el);
   el.childNodes[3].classList.add('hovered');
   const img = el.childNodes[1].childNodes[1];
   imageSrc = img.src;
