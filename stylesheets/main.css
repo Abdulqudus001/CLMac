@@ -2,6 +2,7 @@
 @import url('./navbar.css');
 @import url('./sidebar.css');
 @import url('./functions.css');
+@import url('./toggle.css');
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -152,11 +153,11 @@ body {
 }
 
 .red .day-color {
-  background-color: red;
+  background-color: var(--red);
 }
 
 .red.raised {
-  background-color:red;
+  background-color:var(--red);
   padding: 1% 0;
   border-radius: 10px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
@@ -389,17 +390,28 @@ body {
 
 /* End of monitoring section */
 
+.functions-md {
+  display: none;
+}
+
 .sm-hidden {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
   .body {
-    display: flex;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    position: relative;
+    left: 150px;
+    max-width: calc(100% - 150px);
+    margin: 0;
   }
 
   .container {
     margin: 0 auto;
+    padding: 30px 0;
+    flex: 0 0 70%;
   }
 
   .reports-header li {
@@ -412,5 +424,15 @@ body {
 
   .sm-hidden {
     display: flex !important;
+  }
+
+  .functions-md {
+    display: block;
+    padding: 50px 0;
+    /* min-width: 400px; */
+  }
+
+  .functions-md .actions {
+    justify-content: flex-end;
   }
 }
