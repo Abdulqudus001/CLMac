@@ -55,7 +55,7 @@
 .hovered {
   width: 80px;
   height: 50px;
-  background-color: var(--white);
+  background-color: var(--sidebar);
   position: absolute;
   top: 5px;
   left: -20px;
@@ -72,8 +72,8 @@
 }
 
 .hovered::before {
-  border-bottom: 10px solid var(--white);
-  border-right: 10px solid var(--white);
+  border-bottom: 10px solid var(--sidebar);
+  border-right: 10px solid var(--sidebar);
   position: absolute;
   right: -11px;
   top: -29.5px;
@@ -81,8 +81,8 @@
 }
 
 .hovered::after {
-  border-top: 10px solid var(--white);
-  border-right: 10px solid var(--white);
+  border-top: 10px solid var(--sidebar);
+  border-right: 10px solid var(--sidebar);
   position: absolute;
   right: -11px;
   bottom: -29.5px;
@@ -91,10 +91,11 @@
 
 
 .cover {
-  background-color: rgba(248, 248, 252, 0.5);
+  background-color: rgba(248, 248, 252, 0.9);
+  border-left: 20px solid #fff;
   position: absolute;
   z-index: 1;
-  left: 50px;
+  left: 100px;
   right: 0;
   top: 0;
   bottom: 0;

@@ -1,13 +1,16 @@
 const sidebar = document.querySelector('.sidebar');
 const cover = document.querySelector('.cover');
 const icons = document.querySelector('.icons');
+const root = document.documentElement;
 
 const toggleNav = () => {
   sidebar.style.display = 'flex';
   cover.style.display = 'block';
+  root.style.setProperty('--sidebar', 'rgba(255, 255, 252, 0.99)');
 }
 
 cover.addEventListener('click', () => {
+  root.style.setProperty('--sidebar', '#f8f8fc');
   sidebar.style.display = 'none';
   cover.style.display = 'none';
 })
