@@ -9,7 +9,6 @@ calender.addEventListener('mouseover', e => {
     } else {
       target = e.target.parentNode;
     }
-    console.log(target);
     currentCard = target.children[2];
     target.classList.add('raised');
   }
