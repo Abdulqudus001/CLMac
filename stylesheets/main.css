@@ -1,6 +1,7 @@
 @import url('./variables.css');
 @import url('./navbar.css');
 @import url('./sidebar.css');
+@import url('./functions.css');
 
 body {
   font-family: 'Roboto', sans-serif;

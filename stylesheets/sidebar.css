@@ -76,7 +76,7 @@
   border-right: 10px solid var(--white);
   position: absolute;
   right: -11px;
-  top: -30px;
+  top: -29.5px;
   border-bottom-right-radius: 80%;
 }
 
@@ -85,13 +85,13 @@
   border-right: 10px solid var(--white);
   position: absolute;
   right: -11px;
-  bottom: -30px;
+  bottom: -29.5px;
   border-top-right-radius: 80%;
 }
 
 
 .cover {
-  background-color: rgba(100, 100, 100, 0.5);
+  background-color: rgba(248, 248, 252, 0.5);
   position: absolute;
   z-index: 1;
   left: 50px;
