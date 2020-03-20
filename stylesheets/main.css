@@ -318,11 +318,86 @@ body {
   opacity: 0.8;
 }
 
+/* Monitoring section */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.stats > div {
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+
+.stats div h5 {
+  margin: 10px 0;
+}
+
+.stats div p {
+  margin: 10px 0;
+  opacity: 0.8;
+  font-size: 0.8rem;
+}
+
+.stats hr {
+  width: 2px;
+  height: 80px;
+  margin: 0;
+  border: none;
+  background-color: #e8e8eb;
+}
+
+.stats > div:first-child {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.stats > div:first-child .progress, 
+.stats > div:last-child .progress {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.stats > div:first-child .progress {
+  border-top: 6px solid #e8e8eb;
+  border-bottom: 6px solid #e8e8eb;
+  border-left: 6px solid #e8e8eb;
+  border-right: 6px solid var(--red);
+}
+
+.stats > div:last-child {
+  background-color: var(--blue);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: var(--white);
+}
+
+.stats > div:last-child .progress {
+  border-bottom: 6px solid rgba(255, 255, 255, 0.1);
+  border-top: 6px solid var(--orange);
+  border-left: 6px solid rgba(255, 255, 255, 0.1);
+  border-right: 6px solid var(--orange);
+}
+
+/* End of monitoring section */
+
 .sm-hidden {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
+  .body {
+    display: flex;
+  }
+
   .container {
     margin: 0 auto;
   }
