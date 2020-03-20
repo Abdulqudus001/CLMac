@@ -116,6 +116,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 15px 10px;
+  transition: padding 0.3s ease-out;
 }
 
 .day h4,
@@ -226,6 +227,7 @@ body {
 .report-stats a {
   text-decoration: none;
   color: var(--blue);
+  transition: transform 0.3s ease-out;
 }
 
 .report-stats a:visited {
@@ -260,23 +262,58 @@ body {
   border: 1px solid #777be2;
 }
 
+.report-stats a:last-child:hover img{
+  background-color: rgba(119, 123, 226, 0.8);
+}
+
+.report-stats a:last-child:hover .report div {
+  background-color: rgba(119, 123, 226, 0.8);
+}
+
 .report-stats a:first-child img {
   border: 1px solid #fc9b37;
+}
+
+.report-stats a:first-child:hover img{
+  background-color: rgba(252, 153, 55, 0.8);
+}
+
+.report-stats a:first-child:hover .report div {
+  background-color: rgba(252, 153, 55, 0.8);
 }
 
 .report-stats a:nth-child(2) img {
   border: 1px solid #f5540b;
 }
 
+.report-stats a:nth-child(2):hover img{
+  background-color: rgba(245, 85, 11, 0.8);
+}
+
+.report-stats a:nth-child(2):hover .report div {
+  background-color: rgba(245, 85, 11, 0.8);
+}
+
 .report-stats a:nth-child(3) img {
   border: 1px solid #87dff0;
 }
 
+.report-stats a:nth-child(3):hover img{
+  background-color: hsla(190, 78%, 74%, 0.8);
+}
+
+.report-stats a:nth-child(3):hover .report div {
+  background-color: hsla(190, 78%, 74%, 0.8);
+}
+
 .report div {
   font-size: 1.2rem;
-  border-radius: 20px;
+  border-radius: 14px;
   background-color: transparent;
   padding: 10px;
+  margin: 10px 0;
+  width: calc(100% - 30px);
+  text-align: center;
   font-weight: 700;
   opacity: 0.8;
 }
